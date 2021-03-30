@@ -1,10 +1,14 @@
 <?xml version="1.0"?>
 <!--
   ~ Copyright © Websolute spa. All rights reserved.
-  ~ See COPYING.txt for license details.
+  ~ See LICENSE and/or COPYING.txt for license details.
   -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Websolute\TransporterManipulation\Api\ManipulationRepositoryInterface" type="Websolute\TransporterManipulation\Model\ManipulationRepository"/>
-    <preference for="Websolute\TransporterManipulation\Api\Data\ManipulationInterface" type="Websolute\TransporterManipulation\Model\ManipulationModel"/>
-    <preference for="Websolute\TransporterManipulation\Api\Data\ManipulationSearchResultInterface" type="Websolute\TransporterManipulation\Model\ManipulationSearchResult"/>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Websolute\TransporterManipulation\Api\ManipulationRepositoryInterface"
+                type="Websolute\TransporterManipulation\Model\ManipulationRepository"/>
+    <preference for="Websolute\TransporterManipulation\Api\Data\ManipulationInterface"
+                type="Websolute\TransporterManipulation\Model\ManipulationModel"/>
+    <preference for="Websolute\TransporterManipulation\Api\Data\ManipulationSearchResultInterface"
+                type="Websolute\TransporterManipulation\Model\ManipulationSearchResult"/>
 </config>

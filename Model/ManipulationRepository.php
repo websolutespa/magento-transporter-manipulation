@@ -1,7 +1,7 @@
 <?php
 /*
  * Copyright © Websolute spa. All rights reserved.
- * See COPYING.txt for license details.
+ * See LICENSE and/or COPYING.txt for license details.
  */
 
 declare(strict_types=1);
@@ -113,7 +113,6 @@ class ManipulationRepository implements ManipulationRepositoryInterface
         $collection = $this->collectionFactory->create();
         $collection->addFieldToFilter(ManipulationModel::ACTIVITY_ID, ['eq' => $activityId]);
         $collection->addFieldToFilter(ManipulationModel::ENTITY_IDENTIFIER, ['eq' => $entityIdentifier]);
-        $collection->load();
 
         /** @var ManipulationModel $manipulation */
         if ($collection->count()) {
@@ -152,7 +151,6 @@ class ManipulationRepository implements ManipulationRepositoryInterface
         $collection = $this->collectionFactory->create();
         $collection->addFieldToFilter(ManipulationModel::ACTIVITY_ID, ['eq' => $activityId]);
         $collection->addFieldToFilter(ManipulationModel::ENTITY_IDENTIFIER, ['eq' => $entityIdentifier]);
-        $collection->load();
 
         if (!$collection->count()) {
             throw new NoSuchEntityException(__(
@@ -177,7 +175,6 @@ class ManipulationRepository implements ManipulationRepositoryInterface
     {
         $collection = $this->collectionFactory->create();
         $collection->addFieldToFilter(ManipulationModel::ACTIVITY_ID, ['eq' => $activityId]);
-        $collection->load();
 
         /** @var ManipulationInterface[] $manipulations */
         $manipulations = $collection->getItems();
